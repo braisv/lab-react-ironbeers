@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10;
+}
+
+.section {
+  width: 100vw;
+}
+
+.section a {
+  text-decoration: none;
+  color: rgb(20, 20, 20);
+}
+
+.section h2 {
+  font-weight: 100;
+  padding: 10px;
+}
+
+.section p {
+  padding: 10px;
+  padding-top: 0;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.section img {
+  width: 100vw;
+}
