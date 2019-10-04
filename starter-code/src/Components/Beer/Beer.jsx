@@ -1,25 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import axios from "axios";
-import './RandomBeer.css'
+import "./Beer.css";
 
-export default class RandomBeer extends Component {
 
+export default class Beer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      beer: {}
+      beer: []
     };
   }
 
-  componentWillMount() {
-    this.getRandomBeer();
+  componentDidMount() {
+    this.getSingleBeer();
   }
 
-  getRandomBeer = () => {
+  getSingleBeer = () => {
+    const { params } = this.props.match;
     axios
-      .get(`http://localhost:5000/random`)
-      .then(responseFromServer => {
-        const beer = responseFromServer.data;
+      .get(`http://localhost:5000/single/${params.id}`)
+      .then(responseFromApi => {
+        const beer = responseFromApi.data;
+        console.log(beer);
         this.setState({ beer });
       })
       .catch(err => {
@@ -28,6 +30,7 @@ export default class RandomBeer extends Component {
   };
 
   render() {
+    console.log(this.state.beer);
 
     return (
       <div className="single-beer">
@@ -56,6 +59,6 @@ export default class RandomBeer extends Component {
           </li>
         </ul>
       </div>
-    )
+    );
   }
 }

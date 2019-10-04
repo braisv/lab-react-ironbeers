@@ -1,0 +1,22 @@
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 60vw;
+  padding: 30px 0;
+}
+
+.form-section form  input {
+  border: 1px solid rgba(0, 0, 0, 0.534);
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.form-section form button {
+  padding: 5px 10px;
+  background-color: rgb(67, 195, 67);
+  margin: 20px;
+  border-radius: 10px;
+}

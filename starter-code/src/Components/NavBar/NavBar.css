@@ -1,0 +1,14 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 20px 0;
+  background: rgb(77, 144, 231);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.424);
+}
+
+nav h2 {
+  text-align: center;
+  color: whitesmoke;
+}
